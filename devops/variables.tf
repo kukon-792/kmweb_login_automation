@@ -1,6 +1,6 @@
 variable "aws_region" {
   description = "The AWS region things are created in"
-  default     = "ap-south-1"
+  default     = "us-east-2"
 }
 
 variable "ecs_task_execution_role_name" {
@@ -17,7 +17,10 @@ variable "az_count" {
   description = "Number of AZs to cover in a given region"
   default     = "2"
 }
-
+variable "app_image" {
+  description = "Docker image to run the EC2 cluster"
+  default     = "149594762438.dkr.ecr.us-east-2.amazonaws.com/nodeapp"
+}
 variable "app_port" {
   description = "Port exposed by the docker image to redirect traffic to"
   default     = 8080
