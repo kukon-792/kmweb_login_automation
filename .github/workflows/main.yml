@@ -4,7 +4,9 @@ on:
   push:
     tags:
     - '*'
-
+  release:
+    types: [created]
+    
 jobs:
   build:
     runs-on: self-hosted
